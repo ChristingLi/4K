@@ -1,0 +1,100 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.versions.compileSdkVersion
+    buildToolsVersion rootProject.ext.versions.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode rootProject.ext.versions.versionCode
+        versionName rootProject.ext.versions.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //MultiDex分包方法
+        multiDexEnabled true
+
+        //Arouter路由配置
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                arguments = [AROUTER_MODULE_NAME: project.getName()]
+//                includeCompileClasspath = true
+//            }
+//        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //防止编译的时候oom、GC
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    //把implementation 用api代替,它是对外部公开的, 所有其他的module就不需要添加该依赖
+    api rootProject.ext.dependencies["appcompat_v7"]
+    api rootProject.ext.dependencies["constraint_layout"]
+    api rootProject.ext.dependencies["cardview-v7"]
+    api rootProject.ext.dependencies["recyclerview-v7"]
+    api rootProject.ext.dependencies["support-v4"]
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["support_annotations"]
+    //MultiDex分包方法
+    api rootProject.ext.dependencies["multidex"]
+    //黄油刀
+    kapt rootProject.ext.dependencies["butterknife_compiler"]
+    api rootProject.ext.dependencies["butterknife"]
+    //Arouter路由
+    //    annotationProcessor rootProject.ext.dependencies["arouter_compiler"]
+    //    api rootProject.ext.dependencies["arouter_api"]
+    //    api rootProject.ext.dependencies["arouter_annotation"]
+    //eventbus 发布/订阅事件总线
+    api rootProject.ext.dependencies["eventbus"]
+    //日志
+    api rootProject.ext.dependencies["logger"]
+    //图片加载
+    api rootProject.ext.dependencies["glide"]
+    kapt 'com.github.bumptech.glide:compiler:4.8.0'
+    api rootProject.ext.dependencies["rxJava2"]
+    api rootProject.ext.dependencies["rxAndroid"]
+    api rootProject.ext.dependencies["retrofit"]
+    api rootProject.ext.dependencies["retrofitConverters"]
+    api rootProject.ext.dependencies["retrofitConvertersGson"]
+    api rootProject.ext.dependencies["retrofitAdapterRx"]
+    api rootProject.ext.dependencies["okHttp"]
+    api rootProject.ext.dependencies["interceptor"]
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["rxBinding"]
+    api rootProject.ext.dependencies["smartLayout"]
+    api rootProject.ext.dependencies["smartHeader"]
+    api rootProject.ext.dependencies["loadSir"]
+    api rootProject.ext.dependencies["baseRecyclerViewHelper"]
+    api rootProject.ext.dependencies["utilCode"]
+    //    api rootProject.ext.dependencies["numberProgress"]
+    api rootProject.ext.dependencies["backGroundLibrary"]
+    api rootProject.ext.dependencies["materialDialog"]
+    api rootProject.ext.dependencies["photoView"]
+    api rootProject.ext.dependencies["basePopup"]
+    api rootProject.ext.dependencies["lifeCycleExtensions"]
+    kapt 'androidx.databinding:databinding-compiler:3.2.1'
+    //https://github.com/misakuo/3dTagCloudAndroid
+    api 'com.moxun:tagcloudlib:1.2.0'
+    api rootProject.ext.dependencies["dagger2"]
+    implementation files('/Users/ld/AndroidStudioProjects/WanAndroid/app/libs/tbs_sdk.jar')
+    implementation files('/Users/ld/AndroidStudioProjects/WanAndroid/app/libs/alipaySdk-20180601.jar')
+    api 'com.orhanobut:hawk:2.0.1'
+}

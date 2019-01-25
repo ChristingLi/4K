@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--关闭ToolBar-->
+    <declare-styleable name="CloseToolBar">
+        <!--关闭按钮-->
+        <attr name="closeImg" format="reference" />
+        <!--Bar的TextSize-->
+        <attr name="barTextSize" format="dimension" />
+        <!--Bar的文字颜色-->
+        <attr name="barTextColor" format="color" />
+        <!--高度-->
+        <attr name="barHeight" format="dimension" />
+        <!--Bg color-->
+        <attr name="barColor" format="color" />
+        <!--Ele-->
+        <attr name="eleSize" format="dimension" />
+        <!--ele color-->
+        <attr name="eleColor" format="color" />
+    </declare-styleable>
+    <!--废弃-->
+    <declare-styleable name="DisuseClearEditText">
+        <!--是否是密码框-->
+        <attr name="isPassWord" format="boolean" />
+        <!--删除图标-->
+        <attr name="clearRes" format="reference" />
+        <!--显示图标-->
+        <attr name="showRes" format="reference" />
+        <attr name="iconSize" format="dimension" />
+        <!--Hint-->
+        <attr name="editHint" format="string" />
+        <!--length-->
+        <attr name="editLength" format="integer" />
+        <!--textSize-->
+        <attr name="editTextSize" format="dimension" />
+        <!--textColor-->
+        <attr name="editTextColor" format="color" />
+    </declare-styleable>
+    <!--状态View-->
+    <declare-styleable name="StateView">
+        <attr name="emptyResource" format="reference" />
+        <attr name="retryResource" format="reference" />
+        <attr name="loadingResource" format="reference" />
+    </declare-styleable>
+    <!--进度Progress-->
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress_current" format="integer" />
+        <attr name="progress_max" format="integer" />
+
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+
+        <attr name="progress_text_offset" format="dimension" />
+
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+    <!--标题栏TitleBar-->
+    <declare-styleable name="TitleBar" tools:ignore="ResourceName">
+        <!-- 整体样式 -->
+        <attr name="barStyle">
+            <enum name="light" value="0x10" />
+            <enum name="night" value="0x20" />
+            <enum name="transparent" value="0x30" />
+        </attr>
+        <!-- 中间 -->
+        <attr name="title" format="string" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleSize" format="dimension" />
+        <!-- 左边 -->
+        <attr name="leftTitle" format="string" />
+        <attr name="leftIcon" format="reference" /><!-- leftIcon 优先于 backButton -->
+        <attr name="backButton" format="boolean" /><!-- 返回按钮（默认开） -->
+        <attr name="leftColor" format="color" />
+        <attr name="leftSize" format="dimension" />
+        <attr name="leftBackground" format="reference|color" />
+        <!-- 右边 -->
+        <attr name="rightTitle" format="string" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="rightColor" format="color" />
+        <attr name="rightSize" format="dimension" />
+        <attr name="rightBackground" format="reference|color" />
+        <!-- 分割线 -->
+        <attr name="lineVisible" format="boolean" />
+        <attr name="lineColor" format="reference|color" />
+        <attr name="lineSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

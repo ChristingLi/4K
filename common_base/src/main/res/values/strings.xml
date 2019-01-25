@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">common_base</string>
+    <string name="interpolator">Interpolator(插值器)</string>
+
+</resources>

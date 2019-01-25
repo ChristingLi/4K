@@ -1,0 +1,111 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aizen.wanandroid"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name=".ui.launcher.LauncherActivity"
+            android:theme="@style/LauncherTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--所有Activity列表-->
+        <activity android:name=".ui.assort.AssortActivity">
+
+        </activity>
+        <!--妹子图-->
+        <activity android:name=".ui.boon.BoonActivity">
+        </activity>
+        <!--查看大图-->
+        <activity android:name=".ui.photo.PhotoViewerActivity"/>
+        <!--WebView-->
+        <activity android:name=".ui.WebViewActivity">
+        </activity>
+        <!--ViewPager测试-->
+        <activity android:name=".ui.page.ViewPagerFragmentActivity">
+        </activity>
+        <!--插值器 估值器-->
+        <activity android:name=".ui.animation.AnimationActivity">
+        </activity>
+        <!--PhotoView-->
+        <activity android:name=".ui.photo.SimpleSampleActivity"/>
+        <!--Home页-->
+        <activity android:name=".aac.ui.home.HomeActivity"/>
+
+        <activity android:name=".ui.notify.NotificationManagerActivity"/>
+
+        <activity android:name=".ui.service.ServiceTestActivity"/>
+
+        <activity android:name=".aac.ui.test.AccActivityView"/>
+
+        <!--<activity android:name=".ui.error.SizeErrorActivity"/>-->
+
+        <!--<activity android:name=".ui.error.H5PayDemoActivity"/>-->
+
+        <activity android:name=".ui.distribute.EventDistributeActivity"/>
+
+        <activity android:name=".ui.dialog.DialogActivity"/>
+
+        <activity android:name=".ui.tag.TagActivity"/>
+
+        <!--Acc模式Login-->
+        <activity android:name=".aac.ui.login.LoginAccActivityView"
+            android:launchMode="singleTask">
+
+        </activity>
+        <!--Acc模式Register-->
+        <activity android:name=".aac.ui.register.RegisterActivityView"
+            android:launchMode="singleTask">
+
+        </activity>
+
+        <activity android:name=".aac.ui.gradient.GradientActivityView">
+
+        </activity>
+
+
+
+        <!--For Kotlin-->
+        <activity android:name=".mvvm.MvvmMainActivity"/>
+
+
+        <!--Speed 监听服务-->
+        <service android:name=".ui.notify.SpeedService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+
+        <activity android:name=".ui.aid.ControlActivity"/>
+        <service android:name=".ui.aid.AidService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+
+        </service>
+    </application>
+</manifest>

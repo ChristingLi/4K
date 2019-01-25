@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">4K</string>
+
+    <string name="menu_zoom_enable">Enable Zoom</string>
+    <string name="menu_zoom_disable">Disable Zoom</string>
+    <string name="menu_scale_fit_center">Change to FIT_CENTER</string>
+    <string name="menu_scale_fit_start">Change to FIT_START</string>
+    <string name="menu_scale_fit_end">Change to FIT_END</string>
+    <string name="menu_scale_fit_xy">Change to FIT_XY</string>
+    <string name="menu_scale_center">Change to CENTER</string>
+    <string name="menu_scale_center_inside">Change to CENTER_INSIDE</string>
+    <string name="menu_scale_center_crop">Change to CENTER_CROP</string>
+    <string name="menu_zoom_random_animate">Animate scale to random value</string>
+    <string name="menu_zoom_random">Set scale to random value</string>
+    <string name="menu_matrix_restore">Restore Display Matrix</string>
+    <string name="menu_matrix_capture">Capture Display Matrix</string>
+    <string name="extract_visible_bitmap">Extract visible bitmap</string>
+    <string name="open_notify">打开常驻状态栏</string>
+    <string name="close_notify">关闭常驻状态栏</string>
+
+    <string-array name="index_titles">
+        <item>浏览器demo</item>
+        <item>全屏播放</item>
+        <item>文件选择器</item>
+    </string-array>
+
+
+    <string name="home">首页</string>
+    <string name="found">发现</string>
+    <string name="message">消息</string>
+    <string name="mine">我的</string>
+
+    <string name="add_friends">批量拉人进群聊</string>
+    <string name="input_group_friends_hint">请复制粘贴加群Json</string>
+    <string name="write_into">写入</string>
+    <string name="data_reset">重置</string>
+    <string name="open_wechat">打开微信</string>
+    <string name="add_to_group">拉人进群</string>
+    <string name="friends_square">朋友圈自动点赞</string>
+    <string name="catch_red_packet">自动抢红包</string>
+    <string name="open_accessibility">打开辅助功能设置页</string>
+    <string name="input_group_name_hint">请输入群聊名称</string>
+
+</resources>
